@@ -1,0 +1,79 @@
+.active-incidents-container {
+    padding: 20px;
+  }
+  
+  .active-incidents-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    
+  }
+  
+  .filter-btn {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+  }
+  
+  .filter-btn.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .incident-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .incident-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .incident-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .incident-category {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+  }
+  
+  .assigned,
+  .completed {
+    margin-right: 10px;
+  }
+  
+  .completed-incidents {
+    margin-top: 15px;
+  }
+  .completed-incidents-btn {
+    margin-top: 15px;
+    color: black;
+    background-color: whitesmoke;
+    height: 40px;
+    width: 200px;
+    /* font-weight: bold; */
+    font-size: medium;
+  }
+  

@@ -1,0 +1,53 @@
+/* Notifications Panel */
+.notifications-container {
+    padding: 15px;
+    background-color: #ffffff;
+    height: 100%;
+    border-left: 1px solid #ced4da;
+  }
+  
+  .notification-item {
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notification-item:last-child {
+    border-bottom: none;
+  }
+  
+  .notification-header {
+    font-weight: bold;
+    font-size: 14px;
+    color: #495057;
+    margin-bottom: 5px;
+  }
+  
+  .notification-body {
+    font-size: 12px;
+    color: #6c757d;
+  }
+  
+  .notification-alert {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .notification-update {
+    background-color: #17a2b8;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .notification-timestamp {
+    margin-top: 5px;
+    font-size: 10px;
+    color: #adb5bd;
+  }
+  
