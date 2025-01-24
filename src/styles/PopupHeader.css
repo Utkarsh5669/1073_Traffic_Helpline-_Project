@@ -1,0 +1,312 @@
+ /* styles/PopupHeader.css */
+
+ /* .popup-header-container {
+  position: fixed;
+  top: 20%;
+  right: 2%;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 20px;
+  animation: slide-in 0.3s ease-out;
+}
+
+.popup-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  float: right;
+}
+
+.popup-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.popup-content {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #ddd;
+}
+
+.notification-alert {
+  border-left-color: #f44336;
+}
+
+.notification-update {
+  border-left-color: #2196f3;
+}
+
+.helpline-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.helpline-item {
+  margin-bottom: 10px;
+}
+
+.helpline-number {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.helpline-number:hover {
+  text-decoration: underline;
+}  */
+
+/* Slide-in animation 
+ @keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}  */
+
+
+/* styles/PopupHeader.css */
+
+.popup-header-container {
+    position: fixed;
+    top: 15%;
+    right: 5%;
+
+
+    /* width: 400px; Increased width */
+    /* max-width: 90%; Makes it responsive */
+    /* max-height: 80%; Ensures content doesn't overflow vertically */
+
+    width: 600px; 
+    max-width: 95%; 
+    max-height: 90%; 
+    
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    animation: slide-in 0.3s ease-out;
+  }
+
+  
+  .popup-close-btn {
+    background: none;
+    border: none;
+    color: #444;
+    font-size: 1.8rem; /* Slightly larger for better accessibility */
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    margin: 15px;
+  }
+  
+  .popup-title {
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold;
+    color: #333;
+    padding: 15px 25px; /* Increased padding */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .notifications-container {
+    padding: 15px 25px; /* Increased padding for readability */
+  }
+  
+  .notification-item {
+    margin-bottom: 20px; /* More space between items */
+    padding: 15px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .notification-item:hover {
+    transform: scale(1.05); /* Enhanced hover effect */
+  }
+  
+  .notification-alert {
+    background-color: #ffe5e5;
+    border-left: 6px solid #f44336;
+  }
+  
+  .notification-update {
+    background-color: #e8f4ff;
+    border-left: 6px solid #2196f3;
+  }
+  
+  .notification-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .notification-message {
+    font-size: 1rem; /* Slightly larger font */
+    color: #555;
+  }
+  
+  .notification-time {
+    font-size: 0.9rem;
+    color: #777;
+    display: block;
+    margin-top: 8px;
+    text-align: right;
+  }
+  
+  .popup-content {
+    padding: 25px;
+    font-size: 1.1rem; /* Slightly larger font for content */
+    color: #444;
+    text-align: center;
+  }
+  
+  .helpline-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .helpline-item {
+    margin-bottom: 12px;
+  }
+  
+  .helpline-number {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .helpline-number:hover {
+    text-decoration: underline;
+  }
+
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    max-height: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+  }
+  
+  .chat-message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  
+  .user-message {
+    background-color: #e6f7ff;
+    align-self: flex-end;
+    text-align: right;
+  }
+  
+  .ai-message {
+    background-color: #f0f0f0;
+    align-self: flex-start;
+    text-align: left;
+  }
+  
+  .chat-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .chat-send-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .chat-send-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  /* Slide-in animation */
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .popup-header-container {
+      top: 10%;
+      right: 5%;
+      width: 95%;
+    }
+  
+    .popup-title {
+      font-size: 1.3rem;
+    }
+  
+    .popup-content {
+      font-size: 1rem;
+    }
+  
+    .notification-item {
+      padding: 12px;
+    }
+  
+    .notification-title {
+      font-size: 1rem;
+    }
+  
+    .notification-message {
+      font-size: 0.9rem;
+    }
+  }
+  
