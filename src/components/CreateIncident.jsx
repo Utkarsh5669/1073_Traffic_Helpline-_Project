@@ -7,15 +7,15 @@ const CreateIncident = () => {
     description: "",
     callerName: "",
     callerNumber: "",
+    mdtNumber: "",
     locationUpdate: false,
-    class: "",
     category: "",
     type: "",
     priority: "",
     dispatchType: "",
-    maxResponders: "",
-    tags: "",
   });
+
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -28,6 +28,12 @@ const CreateIncident = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Data Submitted: ", formData);
+
+    setShowSuccessMessage(true);
+
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 3000);
   };
 
   return (
@@ -37,7 +43,7 @@ const CreateIncident = () => {
         <div className="form-group">
           <label>Place Map Marker to Enter Address</label>
           <div className="input-with-icon">
-            <i className="fa fa-map-marker"></i>
+           <i class="fa-solid fa-location-dot"></i> 
             <input
               type="text"
               name="address"
@@ -80,28 +86,30 @@ const CreateIncident = () => {
           />
         </div>
 
+        <div className="form-group">
+          <label>MDT Number</label>
+          <input
+            type="text"
+            name="mdtNumber"
+            placeholder="Enter MDT Number"
+            value={formData.mdtNumber}
+            onChange={handleChange}
+          />
+        </div>
 
         <div className="form-group">
           <label>Category</label>
-          <select
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-          >
+          <select name="category" value={formData.category} onChange={handleChange}>
             <option value="">Select</option>
-            <option value="Fire">Traffic Congestion</option>
-            <option value="Medical">Road Accident</option>
-            <option value="Medical">Others</option>
+            <option value="Traffic Congestion">Traffic Congestion</option>
+            <option value="Road Accident">Road Accident</option>
+            <option value="Others">Others</option>
           </select>
         </div>
 
         <div className="form-group">
           <label>Type</label>
-          <select
-            name="type"
-            value={formData.type}
-            onChange={handleChange}
-          >
+          <select name="type" value={formData.type} onChange={handleChange}>
             <option value="">Select</option>
             <option value="Rescue">Rescue</option>
             <option value="Emergency">Emergency</option>
@@ -138,13 +146,6 @@ const CreateIncident = () => {
         <div className="form-group">
           <label>Dispatch:</label>
           <div className="dispatch-buttons">
-            {/* <button
-              type="button"
-              className={`dispatch-button ${formData.dispatchType === "Broadcast" ? "active" : ""}`}
-              onClick={() => setFormData({ ...formData, dispatchType: "Broadcast" })}
-            >
-              Broadcast
-            </button> */}
             <button
               type="button"
               className={`dispatch-button ${formData.dispatchType === "Assign" ? "active" : ""}`}
@@ -152,37 +153,8 @@ const CreateIncident = () => {
             >
               Assign
             </button>
-            {/* <button
-              type="button"
-              className={`dispatch-button ${formData.dispatchType === "Both" ? "active" : ""}`}
-              onClick={() => setFormData({ ...formData, dispatchType: "Both" })}
-            >
-              Both
-            </button> */}
           </div>
         </div>
-
-        {/* <div className="form-group">
-          <label>Max. # Assigned Responders</label>
-          <input
-            type="number"
-            name="maxResponders"
-            placeholder="3"
-            value={formData.maxResponders}
-            onChange={handleChange}
-          />
-        </div> */}
-
-        {/* <div className="form-group">
-          <label>Select Tags</label>
-          <input
-            type="text"
-            name="tags"
-            placeholder="Enter Tags"
-            value={formData.tags}
-            onChange={handleChange}
-          />
-        </div> */}
 
         <div className="form-actions">
           <button type="submit" className="create-button">
@@ -193,6 +165,8 @@ const CreateIncident = () => {
           </button>
         </div>
       </form>
+
+      {showSuccessMessage && <div className="success-message">Event created successfully!</div>}
     </div>
   );
 };
