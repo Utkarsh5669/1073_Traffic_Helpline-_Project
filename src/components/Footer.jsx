@@ -1,22 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        <p>Info | Settings | FAQs | Support</p>
-      </div>
-      <div className="footer-icons">
-        <a href="#!" aria-label="Facebook" className="footer-icon">
-          <i className="fab fa-facebook-f"></i>
-        </a>
-        <a href="#!" aria-label="Twitter" className="footer-icon">
-          <i className="fab fa-twitter"></i>
-        </a>
-        <a href="#!" aria-label="Instagram" className="footer-icon">
-          <i className="fab fa-instagram"></i>
-        </a>
+        <Link to="/info">Info</Link> | 
+        <Link to="/settings">Settings</Link> | 
+        <Link to="/faqs">FAQs</Link> | 
+        <Link to="/support">Support</Link>
       </div>
     </footer>
   );
