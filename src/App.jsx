@@ -4,19 +4,26 @@ import ActiveIncidents from "./components/ActiveIncidents"; // Import the Active
 import Responder from "./components/Responder";
 import Sidebar from "./components/Sidebar";
 import MapView from "./components/MapView";
-import NotificationPanel from "./components/NotificationsPanel";
+// import NotificationPanel from "./components/NotificationsPanel";
 import Footer from "./components/Footer";
 import CreateIncident from "./components/CreateIncident";
 import Popup from "./components/Popup"; // Import the Popup component
-import ChatPopup from "./components/ChatPopup"; // Import the Chat Popup component
-import CallPopup from "./components/CallPopup"; // Import the Call Popup component
-import NotificationsPopup from "./components/NotificationPopup"; // Import the Notification Popup component
+// import ChatPopup from "./components/ChatPopup"; // Import the Chat Popup component
+// import CallPopup from "./components/CallPopup"; // Import the Call Popup component
+// import NotificationsPopup from "./components/NotificationPopup"; // Import the Notification Popup component
 import "./App.css";
-import logo from "./assets/Chandigarh_Traffic_Logo.png";
-import PoliceLogo from "./assets/Chandigarh_Police_Logo.png";
-import ChatLogo from "./assets/chat-logo.png";
-import CallLogo from "./assets/Calling_Logo.png";
-import NotificationLogo from "./assets/notification_logo.png";
+// import logo from "./assets/Chandigarh_Traffic_Logo.png";
+// import PoliceLogo from "./assets/Chandigarh_Police_Logo.png";
+// import ChatLogo from "./assets/chat-logo.png";
+// import CallLogo from "./assets/Calling_Logo.png";
+// import NotificationLogo from "./assets/notification_logo.png";
+import Header from "./components/Header";
+import Info from "./components/Info"; // Import the Info component
+import Settings from "./components/Settings"; // Import the Settings component
+import FAQs from "./components/FAQ"; // Import the FAQs component
+import Support from "./components/Support"; // Import the Support component
+import "./styles/global.css"; // Import global styles
+// import ThemeToggle from "./components/ThemeToggle";
 
 const App = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false); // State to manage popup visibility
@@ -87,30 +94,12 @@ const App = () => {
   return (
     <Router>
       <div className="app-container">
-        <header className="header-container">
-          <img src={logo} alt="Logo" className="header-logo" />
-          {/* <img src={PoliceLogo} alt="Logo" className="header-logo" /> */}
-          <h2>1073 Chandigarh Traffic Police Control Room</h2>
-          <div className="header-buttons">
-            <button onClick={() => openSpecificPopup("Chat")}>
-              <img src={ChatLogo} alt="Chat" />
-            </button>
-            <button onClick={() => openSpecificPopup("call")}>
-              <img src={CallLogo} alt="Call" />
-            </button>
-            <button onClick={() => openSpecificPopup("notifications")}>
-              <img src={NotificationLogo} alt="Notifications" />
-            </button>
-          </div>
-        </header>
-
+      <Header/>
         <main className="main-content">
+          {/* <ThemeToggle /> */}
           <Sidebar openPopup={openPopup} /> {/* Pass openPopup to Sidebar */}
           <Routes>
-            <Route path="/" element={<MapView />} />
-            {/* <Route path="/chat-popup" element={<ChatPopup />} />
-            <Route path="/call-popup" element={<CallPopup />} />
-            <Route path="/notifications-popup" element={<NotificationsPopup />} /> */}
+          <Route path="/" element={<MapView />} />
             <Route path="/create-incident" element={<CreateIncident />} />
             <Route path="/active-incidents" element={<ActiveIncidents />} />
             <Route
@@ -129,43 +118,19 @@ const App = () => {
               element={
                 <div>
                   <h2>View Attendance</h2>
-                  {/* Add your attendance view logic here */}
                 </div>
               }
             />
+            <Route path="/info" element={<Info />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/faqs" element={<FAQs />} />
+            <Route path="/support" element={<Support />} />
           </Routes>
         </main>
 
         {/* Show Popup if it's open */}
         {isPopupOpen && <Popup content={popupContent} onClose={closePopup} />}
-
-        {/* {isPopupOpen && (
-          <div className="popup-container">
-            <div className="popup-content">
-              <button className="close-popup-btn" onClick={closePopup}>
-                ✖
-              </button>
-              {activePopup === "chat" && <h3>Chat Popup Content</h3>}
-              {activePopup === "call" && <h3>Call Popup Content</h3>}
-              {activePopup === "notifications" && (
-                <div>
-                  <h3>Notifications</h3>
-                  <ul className="notification-list">
-                    {notifications.map((notification) => (
-                      <li key={notification.id} className="notification-item">
-                        <h4>{notification.title}</h4>
-                        <p>{notification.message}</p>
-                        <span className="notification-time">
-                          {notification.time}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
-        )} */}
+        
 
 
         <Footer />
