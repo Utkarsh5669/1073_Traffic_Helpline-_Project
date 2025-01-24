@@ -58,6 +58,116 @@ const ViewAttendance = () => {
       dutyArea: "Sector 34, Sector 35",
       mapLocation: "30.7326,76.7864",
     },
+    {
+      id: 6,
+      name: "TRV# 0016",
+      beltNumber: "12350",
+      loginTime: "07:30 AM",
+      loginId: "login_0016",
+      loginLocation: "Sector 20, Chandigarh",
+      currentLocation: "Sector 20, Chandigarh",
+      dutyArea: "Sector 19, Sector 20",
+      mapLocation: "30.7394,76.7799",
+    },
+    {
+      id: 7,
+      name: "TRV# 0017",
+      beltNumber: "12351",
+      loginTime: "08:15 AM",
+      loginId: "login_0017",
+      loginLocation: "Sector 18, Chandigarh",
+      currentLocation: "Sector 18, Chandigarh",
+      dutyArea: "Sector 17, Sector 18",
+      mapLocation: "30.7341,76.7658",
+    },
+    {
+      id: 8,
+      name: "TRV# 0018",
+      beltNumber: "12352",
+      loginTime: "09:15 AM",
+      loginId: "login_0018",
+      loginLocation: "Sector 16, Chandigarh",
+      currentLocation: "Sector 16, Chandigarh",
+      dutyArea: "Sector 15, Sector 16",
+      mapLocation: "30.7401,76.7624",
+    },
+    {
+      id: 9,
+      name: "TRV# 0019",
+      beltNumber: "12353",
+      loginTime: "08:45 AM",
+      loginId: "login_0019",
+      loginLocation: "Sector 14, Chandigarh",
+      currentLocation: "Sector 14, Chandigarh",
+      dutyArea: "Sector 13, Sector 14",
+      mapLocation: "30.7462,76.7575",
+    },
+    {
+      id: 10,
+      name: "TRV# 0020",
+      beltNumber: "12354",
+      loginTime: "07:50 AM",
+      loginId: "login_0020",
+      loginLocation: "Sector 12, Chandigarh",
+      currentLocation: "Sector 12, Chandigarh",
+      dutyArea: "Sector 11, Sector 12",
+      mapLocation: "30.7523,76.7524",
+    },
+    {
+      id: 11,
+      name: "TRV# 0021",
+      beltNumber: "12355",
+      loginTime: "08:10 AM",
+      loginId: "login_0021",
+      loginLocation: "Sector 11, Chandigarh",
+      currentLocation: "Sector 11, Chandigarh",
+      dutyArea: "Sector 10, Sector 11",
+      mapLocation: "30.7540,76.7498",
+    },
+    {
+      id: 12,
+      name: "TRV# 0022",
+      beltNumber: "12356",
+      loginTime: "09:20 AM",
+      loginId: "login_0022",
+      loginLocation: "Sector 10, Chandigarh",
+      currentLocation: "Sector 10, Chandigarh",
+      dutyArea: "Sector 9, Sector 10",
+      mapLocation: "30.7559,76.7475",
+    },
+    {
+      id: 13,
+      name: "TRV# 0023",
+      beltNumber: "12357",
+      loginTime: "07:40 AM",
+      loginId: "login_0023",
+      loginLocation: "Sector 9, Chandigarh",
+      currentLocation: "Sector 9, Chandigarh",
+      dutyArea: "Sector 8, Sector 9",
+      mapLocation: "30.7574,76.7460",
+    },
+    {
+      id: 14,
+      name: "TRV# 0024",
+      beltNumber: "12358",
+      loginTime: "08:05 AM",
+      loginId: "login_0024",
+      loginLocation: "Sector 8, Chandigarh",
+      currentLocation: "Sector 8, Chandigarh",
+      dutyArea: "Sector 7, Sector 8",
+      mapLocation: "30.7595,76.7436",
+    },
+    {
+      id: 15,
+      name: "TRV# 0025",
+      beltNumber: "12359",
+      loginTime: "09:05 AM",
+      loginId: "login_0025",
+      loginLocation: "Sector 7, Chandigarh",
+      currentLocation: "Sector 7, Chandigarh",
+      dutyArea: "Sector 6, Sector 7",
+      mapLocation: "30.7610,76.7401",
+    },
   ];
 
   const [selectedResponder, setSelectedResponder] = useState(null);
@@ -68,6 +178,11 @@ const ViewAttendance = () => {
 
   const closePopup = () => {
     setSelectedResponder(null);
+  };
+
+  const openMap = (mapLocation) => {
+    // Open the map view in the main page, e.g., with window.open or by updating the app's state
+    window.open(<iframe>`https://maps.google.com/maps?q=${mapLocation}&t=&z=15&ie=UTF8&iwloc=&output=embed`</iframe> ,"_self"); // Assuming you have a route for the map page
   };
 
   return (
@@ -121,9 +236,15 @@ const ViewAttendance = () => {
                 height="250"
                 frameBorder="0"
                 style={{ border: 0 }}
-                src={`https://maps.google.com/maps?q=Chandigarh&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+                src={`https://maps.google.com/maps?q=${selectedResponder.mapLocation}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                 allowFullScreen
               ></iframe>
+              <button
+                className="view-on-map-btn"
+                onClick={() => openMap(selectedResponder.mapLocation)}
+              >
+                View on Main Page
+              </button>
             </div>
           </div>
         </div>
