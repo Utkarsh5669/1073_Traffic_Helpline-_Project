@@ -1,0 +1,111 @@
+.view-attendance-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.responder-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.responder-name {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.responder-name:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  position: relative; /* Enable absolute positioning for close button */
+  animation: fadeIn 0.3s ease; /* Add animation */
+}
+
+.popup-content h3 {
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #007bff; /* Add underline to header */
+  padding-bottom: 5px;
+}
+
+.popup-content p {
+  margin: 5px 0;
+  line-height: 1.5; /* Increase line height for readability */
+}
+
+.map-container {
+  margin-top: 15px;
+  border-radius: 5px;
+  overflow: hidden; /* Ensure rounded corners for iframe */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.map-container iframe {
+  border: none; /* Remove border from iframe */
+}
+
+.close-popup-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-popup-btn:hover {
+  color: red;
+}
+
+/* Animation for popup appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

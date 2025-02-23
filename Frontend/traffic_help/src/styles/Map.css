@@ -1,0 +1,5 @@
+/* Map.css */
+.map-container {
+    height: 100vh; /* 100% viewport height */
+    width: 100%;   /* 100% width of the parent container */
+  }

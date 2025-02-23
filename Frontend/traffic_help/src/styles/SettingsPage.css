@@ -1,0 +1,143 @@
+.settings-page-container {
+  padding: 20px;
+  background-color: #ffffff; /* Neutral background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333; /* Text color for readability */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto; /* Center the container */
+  overflow-y: auto; /* Scroll if content overflows */
+}
+
+.settings-page-container:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.settings-page-container h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #446c8a; /* Vibrant blue color */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1.5px; /* Letter spacing for a modern look */
+  border-bottom: 2px solid #0078d7; /* Underline effect */
+  padding-bottom: 5px;
+}
+
+.settings-page-container h3 {
+  font-size: 1.7rem;
+  margin-top: 25px;
+  color: #444; /* Darker shade for distinction */
+  transition: color 0.3s ease;
+}
+
+.settings-page-container h3:hover {
+  color: #0078d7; /* Color change on hover */
+}
+
+.settings-page-container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.6; /* Better line spacing for readability */
+}
+
+.settings-page-container label {
+  display: flex; /* Aligns checkbox and label in a horizontal row */
+  align-items: center; /* Vertically aligns the checkbox and label text */
+  font-size: 1.1rem; /* Makes the text size consistent */
+  margin-bottom: 15px; /* Adds spacing between labels */
+  color: #555; /* Neutral text color */
+  cursor: pointer; /* Changes the cursor to pointer for interactivity */
+  transition: color 0.3s ease;
+}
+
+.settings-page-container label input[type="checkbox"] {
+  margin-right:  8px; /* Reduces space between checkbox and label text */
+  transform: scale(1.2); /* Slightly enlarges the checkbox for better visibility */
+  vertical-align: middle; /* Ensures the checkbox aligns with the text */
+  
+}
+
+
+.settings-page-container label:hover {
+  color: #0078d7; /* Highlight label on hover */
+}
+
+.settings-page-container label input {
+  margin-right: 10px;
+  transform: scale(1.2); /* Make checkboxes larger */
+}
+
+.settings-page-container select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.settings-page-container select:focus {
+  border: 1px solid #0078d7;
+  box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+  outline: none;
+}
+
+.settings-page-container ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.settings-page-container ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  color: #555; /* Neutral text color */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-page-container ul li:before {
+  content: "•"; /* Bullet point */
+  position: absolute;
+  left: 0;
+  color: #0078d7; /* Vibrant blue bullet */
+  font-size: 1.2rem;
+}
+
+.settings-page-container ul li:hover {
+  color: #0078d7; /* Text color change on hover */
+  transform: translateX(5px); /* Subtle slide effect */
+}
+
+.settings-page-container button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #0078d7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-page-container button:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+.settings-page-container button:active {
+  transform: scale(0.98);
+}
+

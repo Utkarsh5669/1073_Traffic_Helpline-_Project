@@ -1,0 +1,143 @@
+/* Sidebar container styling */
+.sidebar-container {
+    background-color: #f0f0f0; /* Light grey background */
+    width: 300px; /* Increase sidebar width */
+    height: 100vh; /* Full height of the viewport */
+    padding: 20px; /* Add padding for better spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    position: fixed;
+    top: 0;
+    left: -300px;
+    background-color: #313a44;
+    color: white;
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it's above other elements */
+    overflow-y: auto; /* Scrollable for long content */
+
+
+  }
+  
+  /* List styling */
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Make list items take full width */
+  }
+  
+  /* Button styling */
+  .sidebar-button {
+    display: block;
+    width: 100%; /* Full width buttons */
+    padding: 15px; /* Larger padding for bigger buttons */
+    /* margin-bottom: 15px; Add spacing between buttons */
+    background-color: #d9d9d9; /* Slightly darker grey */
+    color: #333; /* Dark grey text */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Add hover and click effects */
+    border: none;
+    text-align: left;
+    margin-top: 80px;
+  }
+  .sidebar-container.visible {
+    left: 0; /* Slide in when visible */
+  }
+  
+  /* Button hover effect */
+  .sidebar-button:hover {
+    background-color: #b3b3b3; /* Darker grey on hover */
+    transform: scale(1.03); /* Slightly enlarge button */
+  }
+  
+  /* Button active effect */
+  .sidebar-button:active {
+    background-color: #999; /* Even darker grey when pressed */
+  }
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .hamburger-menu .line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hamburger-menu:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  
+  .hamburger-menu:hover .line {
+    background-color: #555;
+  }
+  .close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .close-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 998;
+  }
+  .sidebar {
+    position: fixed; /* Makes the sidebar fixed in place */
+    top: 0; /* Aligns the sidebar to the top of the viewport */
+    left: 0; /* Aligns the sidebar to the left of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    width: 250px; /* Set your desired sidebar width */
+    background-color: #333; /* Background color for the sidebar */
+    z-index: 1000; /* Ensures the sidebar is above the header and other elements */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for sliding */
+    transform: translateX(-100%); /* Initially hidden off-screen to the left */
+}
+
+/* When the sidebar is active (e.g., via a class or state), slide it in */
+.sidebar.active {
+    transform: translateX(0); /* Brings the sidebar into view */
+}
+
+/* Header styles for z-index comparison */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 900; /* Ensure the header is below the sidebar */
+    background-color: #fff;
+}

@@ -1,0 +1,19 @@
+/* Updated map-view styling */
+.map-view {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the map content */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+/* Updated iframe styling to make the map responsive */
+.map {
+  width: 100%; /* Occupy full width of the parent container */
+  height: 100%; /* Occupy full height of the parent container */
+  border: none; /* Remove border */
+  border-radius: 0; /* Keep corners square */
+  box-shadow: none; /* Remove shadow */
+}

@@ -1,0 +1,121 @@
+.create-incident-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .priority-buttons,
+  .dispatch-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .priority-button,
+  .dispatch-button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f1f1f1;
+  }
+  
+  .priority-button.active,
+  .dispatch-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .create-button {
+    background: #28a745;
+    color: white;
+  }
+  
+  .cancel-button {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .create-button,
+  .cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .create-button:hover {
+    background: #218838;
+  }
+  
+  .cancel-button:hover {
+    background: #c82333;
+  }
+
+  .success-message {
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    z-index: 1000;
+    animation: fadeOut 3s ease-in-out;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  

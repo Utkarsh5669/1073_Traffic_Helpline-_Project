@@ -1,0 +1,214 @@
+/* General header container styling */
+.header-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  background-color: #f8f8f8; /* Light gray background */
+  font-size: 24px;
+  font-weight: bold;
+  position: sticky;
+  top: -100px; /* Initially hidden */
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s ease-in-out; /* Smooth transition for visibility */
+}
+
+  
+  
+  .header-logo {
+    height: 85px;
+    width: 85px;
+    margin-left: 85px;
+  }
+  
+  .header-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+
+/* Import custom font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.header-container h1 {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-left: 40px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons container */
+.header-buttons {
+  display: flex;
+  gap: 15px;
+  margin-right: 25px;
+}
+
+
+
+.header-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.header-buttons img {
+  height: 40px;
+  width: 40px;
+}
+
+
+
+/* Responsive Design for Specific Screen Sizes */
+@media (max-width: 1280px) {
+  .header-container {
+    padding: 15px 0;
+  }
+
+  .header-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-logo,
+  .header-police-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .header-buttons img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 10px 0;
+  }
+
+  .header-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .header-logo,
+  .header-police-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .header-buttons img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-container h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .header-logo,
+  .header-police-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header-buttons {
+    gap: 10px;
+  }
+
+  .header-buttons img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align all elements */
+    padding: 10px 0; /* Compact padding for smaller screens */
+    background-color: #ffffff; /* Keep a clean, light background */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  }
+
+  .header-container h1 {
+    font-size: 1.6rem; /* Reduce font size for mobile readability */
+    margin: 5px 0; /* Compact vertical spacing */
+    text-align: center; /* Center-align text */
+    letter-spacing: 1px; /* Slightly closer letter spacing */
+    line-height: 1.4; /* Adjust line height for better spacing */
+  }
+
+  .header-logo,
+  .header-police-logo {
+    width: 50px; /* Compact logo size */
+    height: 50px;
+    margin: 5px 0; /* Add slight spacing between logos and text */
+  }
+
+  .header-buttons {
+    display: flex; /* Keep buttons inline */
+    justify-content: center; /* Center-align buttons */
+    gap: 10px; /* Maintain space between buttons */
+    margin-top: 10px; /* Add spacing below the title */
+  }
+
+  .header-buttons img {
+    width: 20px; /* Smaller icon size */
+    height: 20px;
+    filter: brightness(0.8); /* Slight dimming for better mobile aesthetics */
+    transition: transform 0.2s; /* Add a hover effect */
+  }
+
+  .header-buttons img:hover {
+    transform: scale(1.1); /* Slight zoom on hover for feedback */
+  }
+
+  /* Add additional spacing for better UX */
+  .header-buttons button {
+    padding: 5px;
+  }
+}
+
+  /* Header Container */
+  .header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #f8f8f8; /* Light gray background */
+    font-size: 24px;
+    font-weight: bold;
+    position: sticky;
+    top: -100px; /* Initially hidden */
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out; /* Smooth transition for visibility */
+  }
+  .header-container h1 {
+    font-weight: bold; /* Optional: Add bold for better emphasis */
+    margin: 0; /* Ensure no extra margin around the heading */
+    margin-left: 40px;
+  }
+  
+  

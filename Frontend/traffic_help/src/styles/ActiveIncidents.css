@@ -1,0 +1,158 @@
+.active-incidents-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.active-incidents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #d6d6d6;
+  color: #000;
+}
+
+.filter-btn.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.incident-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.incident-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.incident-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.incident-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.incident-id {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.incident-timer {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.timer-icon {
+  margin-right: 5px;
+}
+
+.incident-location {
+  font-size: 14px;
+  color: #777;
+}
+
+.incident-details {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.incident-categories,
+.incident-types {
+  margin-top: 10px;
+}
+
+.incident-category,
+.incident-type {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-right: 5px;
+  background-color: #f0f8ff;
+  color: #007bff;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.incident-status {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assigned,
+.completed {
+  font-size: 14px;
+  color: #333;
+}
+
+.completed-incidents {
+  margin-top: 20px;
+}
+
+.completed-incidents h3 {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.completed-incidents-btn,
+.completed-incidents-close-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.completed-incidents-btn:hover,
+.completed-incidents-close-btn:hover {
+  background-color: #0056b3;
+}
+

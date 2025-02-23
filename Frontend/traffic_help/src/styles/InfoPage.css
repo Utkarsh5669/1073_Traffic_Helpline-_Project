@@ -1,0 +1,43 @@
+ .info-page-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.info-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+ .info-question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #007bff;
+}
+
+ .info-question:hover {
+  color: #0056b3;
+}
+
+ .info-toggle {
+  font-size: 16px;
+  color: #333;
+}
+
+ .info-answer {
+  margin-top: 5px;
+  color: #555;
+}

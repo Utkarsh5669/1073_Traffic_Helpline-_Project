@@ -1,0 +1,76 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 200px; /* Adjust this to match the width of your sidebar */
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Slightly lighter overlay */
+    display: flex;
+    justify-content: flex-start; /* Align to the left, next to the sidebar */
+    align-items: flex-start; /* Align the popup at the top */
+    z-index: 1000; /* Ensure it appears above other content */
+    padding: 20px; /* Add padding for space between the popup and edges */
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 30px; /* Increase padding for better spacing */
+    border-radius: 8px;
+    position: relative;
+    width: 700px; /* Make the popup wider */
+    height: 850px; /* Add height for a larger popup */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for emphasis */
+    overflow-y: auto; /* Add scroll if content overflows */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 24px; /* Slightly larger close button */
+    cursor: pointer;
+    color: #555; /* Subtle color for the close button */
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .close-button:hover {
+    color: #d32f2f; /* Change color on hover for better UX */
+  }
+  
+  .popup-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 300px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 16px;
+  }
+  
+  .popup-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .popup-content {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .close-popup-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
