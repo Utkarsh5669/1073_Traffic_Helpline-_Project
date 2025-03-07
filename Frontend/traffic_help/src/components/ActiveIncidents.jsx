@@ -13,8 +13,8 @@ const ActiveIncidents = () => {
   useEffect(() => {
     const fetchIncidents = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/events");
-        // const response = await axios.get("https://4aee-2409-4055-4e18-8796-84ca-1132-464a-28a.ngrok-free.app/api/events");
+        // const response = await axios.get("http://localhost:5000/api/events");
+        const response = await axios.get("https://4aee-2409-4055-4e18-8796-84ca-1132-464a-28a.ngrok-free.app/api/events");
         console.log("✅ API Response:", response.data);
 
         // Ensure we extract only the 'events' array
