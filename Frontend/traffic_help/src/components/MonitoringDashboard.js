@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect } from "react";
 import "../styles/MonitoringDashboard.css"; // Import CSS for styling
 
