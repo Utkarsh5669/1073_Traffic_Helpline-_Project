@@ -105,11 +105,12 @@ const CreateIncident = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/events", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/events`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(formData),
+});
+
       // const response = await fetch("https://4aee-2409-4055-4e18-8796-84ca-1132-464a-28a.ngrok-free.app/api/events", {
       //   method: "POST",
       //   headers: { "Content-Type": "application/json" },
